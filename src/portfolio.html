@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.html')
+	<body class="main__body">
+		<!-- Nav -->
+        @@include('html/_nav.html',{
+			"about":"",
+			"portfolio": "menu__link--active",
+			"services": "",
+			})
+		<!-- Header -->
+		<!-- Main Page -->
+		<main>
+            <section class="header-portfolio">
+                <div class="header-portfolio__container">
+                    <div class="header-portfolio__inner">
+                        <h1 class="header-portfolio__title">Light Up Your Project</h1>
+                        <p class="header-portfolio__text">Trinwdax has delivered 100+ Projects and will be delighted to launch yours</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact-us -->
+            <section class="contact-us">
+                <div class="contact-us__container">
+                    <div class="line-animation">
+                        <div class="line-animation-wrap">
+                            <h2 class="contact-us__title title">Contact us</h2>
+                            <div class="line-animation-inner">
+                                <svg class="line-animation--svg" width="177" height="34" viewBox="0 0 177 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="line-animation--path" d="M2 2H175L101.785 12.0908L62.8157 17.6408L27.9795 23.1908C-9.21843 30.2544 66.7287 35.037 101.785 29.7498" stroke="#BAFF4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>              
+                        </div>
+                    </div>
+                    <div class="contact-us__wrapper">
+                        @@include('./html/_form.html')
+                        <div class="line-animation">
+                            <div class="line-animation-wrap">
+                                <h2 class="contact-us__form-title"><span>Contact us today</span> and let's realize your digital growth <span>together!</span></h2>
+                                <div class="line-animation-inner">
+                                    <svg class="line-animation--svg" width="570" height="56" viewBox="0 0 570 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="line-animation--path" d="M2 2H568C449 14.9066 244.054 17.5484 227 34.2665C207.374 53.5059 244.717 56.7529 355.5 52.1371" stroke="#BAFF4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                </div>              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</main>
+		<!-- Footer -->
+		@@include('html/_footer.html')
+		<script src="js/app.min.js" defer></script>
+	</body>
+</html>

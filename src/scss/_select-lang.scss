@@ -1,0 +1,74 @@
+/* Changing the language */
+.change-lang {
+    margin: 0px 28px;
+    background-color: transparent;
+    z-index: 10;
+    @include tablet {
+        margin: 0px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.dropdown {
+    position: relative;
+    padding: 4px 6px;
+    &__button {
+        position: relative;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $text-color;
+        text-transform: lowercase;
+        background-color: transparent;
+        &::first-letter {
+            text-transform: uppercase
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 115%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: url("@img/icons/arrow.svg") 50% 50%/cover no-repeat;
+        }
+    }
+    &__list{
+        position: absolute;
+        padding: 10px 20px !important;
+        left: 55%;
+        top: 50px;
+        transform: translateX(-50%);
+        width: 70px;
+        background: #303030;
+        border-radius: 5px;
+        text-align: center;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+        z-index: 1;
+        @include tablet {
+            top: 40px;
+            background: #111111;
+        }
+    }
+    &__list--active {
+        overflow: visible;
+        opacity: 1;
+    }
+    &__list-item{
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 1.2;
+        transition: opacity 0.2s ease-in;
+        &:hover {
+            opacity: 0.5;
+        }
+        &::first-letter {
+            text-transform: uppercase
+        }
+    }
+}

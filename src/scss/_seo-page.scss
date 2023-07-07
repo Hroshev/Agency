@@ -1,0 +1,149 @@
+/* Seo optimization */
+/* header-seo */
+.header-seo {
+    margin: 120px 0px 150px 0px;
+    @include tablet {
+        margin: 120px 0px 100px 0px;
+    }
+    &__title {
+        text-transform: none;
+    }
+    &__subtitle {
+        margin: 150px 0px 40px 0px;
+        text-transform: none;
+        text-align: center;
+        @include phone {
+            font-size: 24px;
+            margin: 96px 0px 32px 0px;
+            text-align: left;
+        }
+    }
+    &__button {
+        width: 100%;
+        &::before {
+            left: 60%;
+            @include tablet-min {
+                left: 70%;
+            }
+        }
+    }
+}
+
+/* seo-features */
+.seo-features {
+    margin-bottom: 150px;
+    @include tablet {
+        margin-bottom: 100px;
+    }
+    &__inner {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 60px;
+        }
+    }
+    &__title {
+        max-width: 600px;
+        text-transform: none;
+    }
+    &__text {
+        max-width: 488px;
+        @include tablet {
+            max-width: 100%;
+        }
+        @include phone {
+            font-size: 16px;
+        }
+
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @include tablet {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+    &__item {
+        padding: 24px 32px;
+        min-height: 350px;
+        border-radius: 32px;
+        background-color: #303030;
+        @include desktop-min {
+            min-height: 400px;
+        }
+        @include tablet {
+            width: 100%;
+            min-height: 100%;
+        }
+        @include phone {
+            min-height: 360px;
+        }
+    }
+    &__number {
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 700;
+        color: $accent;
+    }
+    &__conten {
+        max-width: 339px;
+        @include tablet {
+            max-width: 100%;
+        }
+    }
+}
+
+/* seo-benefits */
+.seo-benefits {
+    margin-bottom: 150px;
+    @include tablet {
+        margin-bottom: 100px;
+    }
+    &__title {
+        text-transform: none;
+    }
+    &__item {
+        padding: 45px 0px 34px 0px;
+        display: flex;
+        gap: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+        @include phone {
+            padding: 40px 0px 24px 0px;
+        }
+    }
+    &__number {
+        width: 9%;
+        font-size: 24px;
+        color: $accent;
+        -webkit-text-stroke: 1px $accent;
+        color: transparent;
+    }
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        @include tablet {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+    &__type {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &__text {
+        max-width: 696px;
+        @include phone {
+            font-size: 16px;
+        }
+    }
+}

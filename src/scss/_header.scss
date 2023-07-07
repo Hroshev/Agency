@@ -1,0 +1,39 @@
+/* Header */
+.header {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__title {
+        color: $accent;
+    }
+    @include tablet {
+        height: 100vh;
+    }
+    &__wrapper {
+        margin-left: 104px;
+        @include desktop-min {
+            margin-left: 0px;
+        }
+        @include tablet {
+            margin-left: 0px;
+        }
+    }
+    &__text {
+        margin: 60px 0px 60px 0px;
+        width: 100%;
+        max-width: 378px;
+        @include tablet {
+            margin: 96px 0px 32px 0px;
+        }
+        @include phone {
+            font-size: 16px;
+        }
+    }
+    &__button {
+        margin-left: 520px;
+        @include desktop-min {
+            margin-left: 0px;
+        }
+    }
+}

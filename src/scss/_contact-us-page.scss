@@ -1,0 +1,35 @@
+.header-contact {
+    margin: 100px 0px;
+    &__title {
+        max-width: 1040px;
+    }
+}
+
+.contact-info {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        @include tablet {
+            flex-direction: column;
+            gap: 100px;
+        }
+    }
+    &__list {
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__type {
+        margin-bottom: 16px;
+        font-size: 32px;
+    }
+    &__link {
+        font-size: 24px;
+        color: rgba(212, 212, 212, 0.60);
+    }
+    &__link--underline {
+        text-decoration: underline;
+    }
+}

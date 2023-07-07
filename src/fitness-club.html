@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.html')
+	<body class="main__body">
+		<!-- Nav -->
+        @@include('html/_nav.html',{
+			"about":"",
+			"portfolio": "menu__link--active",
+			"services": "",
+			})
+		<!-- Header -->
+        <div class="header-projects">
+            <div class="header-projects__container">
+                <a class="header-projects__button" href="../../portfolio.html">Back</a>
+                <h1 class="header-projects__title">Website for a fitness club</h1>
+                <ul class="header-projects__list">
+                    <li class="header-projects__item">UX/UI Design</li>
+                    <li class="header-projects__item">SEO</li>
+                    <li class="header-projects__item">Frot-end</li>
+                    <li class="header-projects__item">Back-end</li>
+                </ul>
+                <div class="header-projects__inner">
+                    <h3 class="header-projects__subtitle">tasks</h3>
+                    <p class="header-projects__text">Create a website that should be modern, stylish and simple at the same time. The design should inspire confidence in the company. Demonstrate the quality of their work.</p>
+                </div>
+            </div>
+        </div>
+		<!-- Main Page -->
+		<main>
+            <section class="projects-visual">
+                <div class="projects-visual__container">
+                    <div class="line-animation">
+                        <div class="line-animation-wrap">
+                            <h2 class="projects-visual__title title">Visuals</h2>
+                            <div class="line-animation-inner">
+                                <svg class="line-animation--svg" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="line-animation--path" d="M2 2H113L66.0239 12.0908L41.0205 17.6408L18.6689 23.1908C-5.19795 30.2544 43.5311 35.037 66.0239 29.7498" stroke="#BAFF4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>              
+                        </div>
+                    </div>
+                    <!-- Swiper -->
+                        <div class="swiper swiper__progressbar projects__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide projects__swiper-slide">
+                                    <img class="projects__swiper-image" loading="lazy" src="@img/projects/projects-03.png" alt="Screenshot from the project">
+                                </div>
+                                <div class="swiper-slide projects__swiper-slide">
+                                    <img class="projects__swiper-image" loading="lazy" src="@img/projects/projects-03.png" alt="Screenshot from the project">
+                                </div>
+                            </div>
+                            <!-- Swiper navigation -->
+                            <div class="swiper-navigation">
+                                <div class="swiper-navigation-button">
+                                    <button class="swiper-prev" id="projects__swiperPrev">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 12H5" stroke="#BAFF4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 5L5 12L12 19" stroke="#BAFF4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="swiper-next" id="projects__swiperNext">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12H19" stroke="#BAFF4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 5L19 12L12 19" stroke="#BAFF4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    <!-- //Swiper -->
+                </div>
+            </section>
+            <section class="meta">
+                <div class="meta__container">
+                    <div class="line-animation meta__indent">
+                        <div class="line-animation-wrap">
+                            <h2 class="meta__title title">Stages of work</h2>
+                            <div class="line-animation-inner">
+                                <svg  class="line-animation--svg" class="meta__indent" width="240" height="34" viewBox="0 0 240 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="line-animation--path" d="M2 2H238L138.123 12.0908L84.9625 17.6408L37.4403 23.1908C-13.3038 30.2544 90.3004 35.037 138.123 29.7498" stroke="#BAFF4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>              
+                        </div>
+                    </div>
+                    @@include('./html/_accordion.html')
+                </div>
+            </section>
+            <!-- Contact-us -->
+            <section class="contact-us">
+                <div class="contact-us__container">
+                    <div class="line-animation">
+                        <div class="line-animation-wrap">
+                            <h2 class="contact-us__title title">Contact us</h2>
+                            <div class="line-animation-inner">
+                                <svg class="line-animation--svg" width="177" height="34" viewBox="0 0 177 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="line-animation--path" d="M2 2H175L101.785 12.0908L62.8157 17.6408L27.9795 23.1908C-9.21843 30.2544 66.7287 35.037 101.785 29.7498" stroke="#BAFF4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>              
+                        </div>
+                    </div>
+                    <div class="contact-us__wrapper">
+                        @@include('./html/_form.html')
+                        <div class="line-animation">
+                            <div class="line-animation-wrap">
+                                <h2 class="contact-us__form-title"><span>Contact us today</span> and let's realize your digital growth <span>together!</span></h2>
+                                <div class="line-animation-inner">
+                                    <svg class="line-animation--svg" width="570" height="56" viewBox="0 0 570 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="line-animation--path" d="M2 2H568C449 14.9066 244.054 17.5484 227 34.2665C207.374 53.5059 244.717 56.7529 355.5 52.1371" stroke="#BAFF4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                </div>              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</main>
+		<!-- Footer -->
+		@@include('html/_footer.html')
+		<script src="js/app.min.js" defer></script>
+	</body>
+</html>

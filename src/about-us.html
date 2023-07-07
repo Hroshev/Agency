@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.html')
+	<body class="main__body">
+		<!-- Nav -->
+        @@include('html/_nav.html',{
+            "about":"menu__link--active",
+            "portfolio": "",
+            "services": "",
+            })
+		<!-- Header -->
+        <header class="header-about">
+            <div class="header-about__container">
+                <h2 class="header-about__title">We are <span>a team of professionals specializing</span> in the development of <span>unique websites</span> and the marketing of brands in the online space. Our goal is to <span>help your company</span> succeed in the digital era.</h2>
+                <a class="header-about__button button" href="./contact-us.html">Сonnect with us</a>
+            </div>
+        </header>
+		<!-- Main Page -->
+		<main>
+            <section class="about-slider">
+                <div class="about-slider__container">
+                    <h2 class="about-slider__title">Trinwdax in numbers</h2>
+                </div>
+               <!--  Swiper -->
+               <div class="swiper__container">
+                <div class="swiper about__swiper">
+                    <div class="swiper-wrapper about__swiper-wrapper">
+                      <div class="swiper-slide about__swiper-slide">
+                        <h3 class="about__item-text">100+</h3>
+                        <p class="about__item-subtext">Projects</p>
+                      </div>
+                      <div class="swiper-slide about__swiper-slide">
+                        <h3 class="about__item-text">3</h3>
+                        <p class="about__item-subtext">Years on the market</p>
+                      </div>
+                      <div class="swiper-slide about__swiper-slide">
+                        <h3 class="about__item-text">10</h3>
+                        <p class="about__item-subtext">Repeat orders</p>
+                      </div>
+                      <div class="swiper-slide about__swiper-slide">
+                        <h3 class="about__item-text">15+</h3>
+                        <p class="about__item-subtext">Repeat orders</p>
+                      </div>
+                    </div>
+                </div>
+               </div>
+            </section>
+            <section class="about-features">
+                <div class="about-features__container">
+                    <div class="about-features__inner">
+                        <div class="about-features__content">
+                            <p class="about-features__text">Every customer is unique and has individual needs. We conduct marketing analysis to understand your business, target audience and user needs. This allows us to develop a customized solution to help you succeed.</p>
+                            <p class="about-features__text">We create a user-friendly interface that is attractive and intuitive for customers. We also create an adaptive design so that the website looks and works great on any device.</p>
+                            <a class="about-features__button button" href="#">Order a project</a>
+                        </div>
+                        <img class="about-features__image" loading="lazy" src="@img/Macbook-Pro.png" alt="Macbook pro">
+                    </div>
+                </div>
+            </section>
+            <section class="about-benefits">
+                <div class="about-benefits__container">
+                    <h2 class="about-benefits__title title-2"><span>Advantages</span> of working with Trinwdax</h2>
+                    <div class="about-benefits__inner">
+                        <div class="about-benefits__item">
+                            <img class="about-benefits__image" loading="lazy" src="@img/icons/individual.svg" alt="Individual approach to each client">
+                            <h3 class="about-benefits__content">Individual approach to each client</h3>
+                        </div>
+                        <div class="about-benefits__item">
+                            <img class="about-benefits__image" loading="lazy" src="@img/icons/qualified.svg" alt="Qualified experienced professionals">
+                            <h3 class="about-benefits__content">Individual approach to each client</h3>
+                        </div>
+                        <div class="about-benefits__item">
+                            <img class="about-benefits__image" loading="lazy" src="@img/icons/concepts-offered.svg" alt="Variety of design concepts offered">
+                            <h3 class="about-benefits__content">Individual approach to each client</h3>
+                        </div>
+                    </div>
+                    <div class="about-benefits__wrapper">
+                        <p class="about-benefits__text">We provide a full range of marketing services to help bring your brand to the forefront of the online world. Our team of experts in search engine optimization (SEO), content marketing, social media and advertising work with you to attract more leads and increase conversions.</p>
+                        <a class="about-benefits__button button" href="#">Order a project</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact-us -->
+            <section class="contact-us">
+                <div class="contact-us__container">
+                    <div class="line-animation">
+                        <div class="line-animation-wrap">
+                            <h2 class="contact-us__title title">Contact us</h2>
+                            <div class="line-animation-inner">
+                                <svg class="line-animation--svg" width="177" height="34" viewBox="0 0 177 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="line-animation--path" d="M2 2H175L101.785 12.0908L62.8157 17.6408L27.9795 23.1908C-9.21843 30.2544 66.7287 35.037 101.785 29.7498" stroke="#BAFF4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>              
+                        </div>
+                    </div>
+                    <div class="contact-us__wrapper">
+                        @@include('./html/_form.html')
+                        <div class="line-animation">
+                            <div class="line-animation-wrap">
+                                <h2 class="contact-us__form-title"><span>Contact us today</span> and let's realize your digital growth <span>together!</span></h2>
+                                <div class="line-animation-inner">
+                                    <svg class="line-animation--svg" width="570" height="56" viewBox="0 0 570 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="line-animation--path" d="M2 2H568C449 14.9066 244.054 17.5484 227 34.2665C207.374 53.5059 244.717 56.7529 355.5 52.1371" stroke="#BAFF4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                </div>              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</main>
+		<!-- Footer -->
+		@@include('html/_footer.html')
+		<script src="js/app.min.js" defer></script>
+	</body>
+</html>

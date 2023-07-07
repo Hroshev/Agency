@@ -1,0 +1,45 @@
+/* Line Animation */
+.line-animation {
+    &-wrap {
+      position: relative;
+    }
+    &-inner {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      height: auto;
+    }
+    &-inner--header {
+      left: 40%;
+      top: 85%;
+      @include desktop-min {
+        left: 50px;
+        top: 90%;
+      }
+      @include phone {
+        left: 0;
+        svg {
+          max-width: 280px;
+        }
+      }
+    }
+    &--svg {
+      width: 100%;
+    }
+    &--path {
+      fill: none;
+      stroke: #baff4a;
+      stroke-dasharray: 1500;
+      stroke-dashoffset: 1500;
+    }
+  }
+  
+  .animate {
+    animation: line-draw 4s linear forwards;
+  }
+  
+  @keyframes line-draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

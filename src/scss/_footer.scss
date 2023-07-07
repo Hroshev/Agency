@@ -1,0 +1,133 @@
+/* Footer */
+.footer {
+    margin-top: 158px;
+    @include phone {
+        margin-top: 100px;
+    }
+    &__line {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.60);
+    }
+    &__content {
+        padding: 60px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        column-gap: 40px;
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__logo {
+        width: 96px;
+        height: 96px;
+    }
+    &__copyright-text p{
+        margin-top: 35px;
+        font-size: 16px;
+        line-height: 1.5;
+        @include tablet {
+            margin-top: 50px;
+        }
+    }
+    &__copyright-text--pc {
+        display: block;
+        opacity: 1;
+        @include tablet {
+            display: none !important;
+            opacity: 0;
+        }
+    }
+    &__menu--logo {
+        @include tablet {
+            order: 1;
+        }
+    }
+    &__menu--nav {
+        @include tablet {
+            margin: 50px 0px !important;
+            order: 3;
+        }
+    }
+    &__menu--info {
+        @include tablet {
+            order: 4;
+        }
+    }
+    &__menu--contact {
+        @include tablet {
+            margin-top: 34px !important;
+            order: 2;
+        }
+    }
+    &__menu {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__menu-link {
+        font-size: 16px;
+        line-height: 1.2;
+        color: $text-color;
+        transition: opacity 0.2s ease-in;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &__menu-link--underline {
+        text-decoration: underline;
+    }
+    &__contact {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__contact-link {
+        position: relative;
+        margin-left: 33px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $text-color;
+        transition: opacity 0.2s ease-in;
+        &:hover {
+            opacity: 0.7;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -33px;
+            transform: translate(0, -50%);
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__contact-link--phone {
+        &::after {
+            background: url("@img/icons/phone.svg") 50% 50%/cover no-repeat;
+        }
+    }
+    &__contact-link--map {
+        &::after {
+            background: url("@img/icons/map.svg") 50% 50%/cover no-repeat;
+        }
+    }
+    &__contact-link--instagram {
+        &::after {
+            background: url("@img/icons/instagram.svg") 50% 50%/cover no-repeat;
+        }
+    }
+    &__copyright-text--mobile {
+        display: none !important;
+        opacity: 0;
+        @include tablet {
+            display: block !important;
+            opacity: 1;
+            order: 5;
+        }
+    }
+}

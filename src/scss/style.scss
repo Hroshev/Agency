@@ -1,0 +1,28 @@
+// Global SCSS-files imports
+@import "./vars";
+@import "./media-requests";
+@import "./fonts";
+@import "./reset";
+@import "./global";
+@import "./line-animation";
+
+// Section or Pages SCSS-files imports
+@import "./nav";
+@import "./select-lang";
+@import './header';
+@import './main-page';
+@import './about-us';
+@import './portfolio-page';
+@import './projects-page';
+@import './design-branding';
+@import './marketing-advertising';
+@import './seo-page';
+@import './contact-us-page';
+@import './accordion';
+@import './form';
+@import './footer';
+
+/* Import Swiper */
+@import './swiper-settings';
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/swiper-bundle";
