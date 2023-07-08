@@ -7,7 +7,7 @@ const langArr = {
     "en": "world-class digital products",
     "ger": "world-class digital products"
   },
- /*  Navigation menu */
+  /*  Navigation menu */
   "menu--about": {
     "en": "About us",
     "ger": "Über uns"
@@ -29,8 +29,8 @@ const langArr = {
     "ger": "Digitales Marketing und Werbung"
   },
   "menu--seo": {
-    "en": "Seo optimization",
-    "ger": "Seo-Optimierung"
+    "en": "SEO optimization",
+    "ger": "SEO-Optimierung"
   },
   "menu--button": {
     "en": "Contact us",
@@ -43,6 +43,33 @@ const dropdownButton = document.querySelector('.dropdown__button');
 const dropdownList = document.querySelector('.dropdown__list');
 const dropdownListItem = document.querySelector('.dropdown__list-item');
 
+// Функция для проверки, является ли элемент или его родительская область выпадающим списком
+function isDropdownElement(element) {
+  if (element === dropdownButton || element === dropdownList || dropdownList.contains(element)) {
+    return true;
+  }
+  return false;
+}
+
+// Функция для закрытия выпадающего списка
+function closeDropdownList() {
+  dropdownList.classList.remove('dropdown__list--active');
+}
+
+// Обработчик события клика на странице
+document.addEventListener('click', function (event) {
+  if (!isDropdownElement(event.target)) {
+    closeDropdownList();
+  }
+});
+
+// Обработчик события скролла на странице
+document.addEventListener('scroll', function (event) {
+  if (!isDropdownElement(event.target)) {
+    closeDropdownList();
+  }
+});
+
 dropdownButton.addEventListener('click', function () {
   dropdownList.classList.toggle('dropdown__list--active');
 });
@@ -52,7 +79,7 @@ dropdownListItem.addEventListener('click', function () {
   const currentLang = dropdownButton.innerText;
   dropdownButton.innerText = dropdownListItem.innerText;
   dropdownListItem.innerText = currentLang;
-  dropdownList.classList.remove('dropdown__list--active');
+  closeDropdownList();
   changeLanguage(lang);
   changeHtmlLang(lang);
   changeMetaDescription(lang);
@@ -70,7 +97,7 @@ if (!allLang.includes(currentLang)) {
   changeLanguage(currentLang); // Инициализация выбранного языка
   changeHtmlLang(currentLang);
   changeMetaDescription(currentLang);
-  dropdownButton.innerText = currentLang.toUpperCase(); // Отображаем выбранный язык в dropdown__button
+  dropdownButton.innerText = currentLang === 'ger' ? 'Ger' : 'En'; // Отображаем выбранный язык в dropdown__button
 }
 
 if (select) {
@@ -105,7 +132,7 @@ function changeHtmlLang(lang) {
 
 function changeMetaDescription(lang) {
   const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription){
+  if (metaDescription) {
     metaDescription.setAttribute('content', langArr.description[lang]);
   }
 }
