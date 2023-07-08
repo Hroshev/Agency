@@ -9,16 +9,28 @@
 			"services": "",
 			})
 		<!-- Header -->
+        <header class="header-portfolio">
+            <div class="header-portfolio__container">
+                <div class="header-portfolio__inner">
+                    <h1 class="header-portfolio__title">Light Up Your Project</h1>
+                    <p class="header-portfolio__text">Trinwdax has delivered 100+ Projects and will be delighted to launch yours</p>
+                </div>
+            </div>
+        </header>
 		<!-- Main Page -->
 		<main>
-            <section class="header-portfolio">
-                <div class="header-portfolio__container">
-                    <div class="header-portfolio__inner">
-                        <h1 class="header-portfolio__title">Light Up Your Project</h1>
-                        <p class="header-portfolio__text">Trinwdax has delivered 100+ Projects and will be delighted to launch yours</p>
+            <section class="projects-features">
+                <div class="projects-features__container">
+                    <p class="projects-features__filter">Filter</p>
+                    <div class="projects-features__inner">
+                        <button class="projects-features__button button--all projects-button--active">All</button>
+                        <button class="projects-features__button button--online-store">Online store</button>
+                        <button class="projects-features__button button--corporate-website">Corporate website</button>
                     </div>
+                    @@include('html/_projects.html')
                 </div>
             </section>
+
             <!-- Contact-us -->
             <section class="contact-us">
                 <div class="contact-us__container">

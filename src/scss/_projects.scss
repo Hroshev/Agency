@@ -1,0 +1,89 @@
+/* Projects */
+.projects {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 592px));
+        justify-content: center;
+        column-gap: 32px;
+        row-gap: 62px;
+        @include phone {
+            grid-template-columns: 1fr;
+            gap: 60px;
+        }
+    }
+    &__wrap {
+        height: 100%;
+        min-height: 805px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 32px;
+        @include phone {
+            gap: 24px;
+            min-height: 550px;
+        }
+    }
+    &__link:hover .projects__image {
+        border: 1px solid $accent;
+    }
+    &__link:hover .projects__name {
+        color: $accent;
+    }
+    &__link:hover .projects__arrow::after {
+        background: url("@img/icons/arrow-up--green.svg") 50% 50%/cover no-repeat;
+    }
+    &__image {
+        width: 100%;
+        max-width: 592px;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid transparent;
+        background-color: #303030;
+        transition: all 0.2s ease-in;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    &__name {
+        padding-top: 32px;
+        font-size: 24px;
+        color: $text-color;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in;
+        @include phone {
+            padding-top: 20px;
+        }
+    }
+    &__arrow {
+        position: relative;
+        width: 16%;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 36px;
+            height: 36px;
+            background: url("@img/icons/arrow-up--gray.svg") 50% 50%/cover no-repeat;
+        }
+    }
+    &__list-technologies {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    &__specialties {
+        padding: 5px 20px;
+        border-radius: 24px;
+        color: $text-color-2;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        background-color: transparent;
+        @include phone {
+            font-size: 16px;
+        }
+    }
+}

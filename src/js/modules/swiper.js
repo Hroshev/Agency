@@ -54,6 +54,15 @@ if (fedbackPrev && fedbackNext) {
   })
 }
 
+/* Other projects Swiper */
+const otherProjectsSwiper = new Swiper(".other-projects__swiper", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 32,
+  keyboard: {
+    enabled: true,
+  },
+});
 
 /* Projects Swiper */
 const ProjectsSwiper = new Swiper(".projects__swiper", {

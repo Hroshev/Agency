@@ -3,7 +3,7 @@
 .header-portfolio {
     margin: 70px 0px 150px 0px;
     @include tablet {
-        margin: 90px 0px 100px 0px;
+        margin: 90px 0px 60px 0px;
     }
     &__inner {
         display: flex;
@@ -19,6 +19,7 @@
     &__title {
         font-size: 68px;
         font-weight: 700;
+        color: #ffffff;
         text-transform: uppercase;
         @include phone {
             font-size: 36px;
@@ -35,4 +36,36 @@
             font-size: 16px;
         }
     }
+}
+
+/* projects-features */
+.projects-features {
+    margin-bottom: 150px;
+    @include tablet {
+        margin-bottom: 100px;
+    }
+    &__filter {
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    &__inner {
+        margin-bottom: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 16px;
+    }
+    &__button {
+        padding: 10px 20px;
+        line-height: 1.2;
+        border-radius: 5px;
+        color: $text-color;
+        background-color: #303030;
+    }
+    &__button.projects-button--active {
+        color: #111111;
+        background-color: $accent;
+    } 
 }

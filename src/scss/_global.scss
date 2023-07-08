@@ -14,6 +14,14 @@ body {
   width: 100%;
   max-width: ($containerWidth + ($containerPadding * 2)) + px;
 }
+
+.container-right {
+  padding-left: calc((100% - 1860px) / 2 + 24px);
+  @include phone {
+    padding: 0 $containerPadding + px;
+  }
+}
+
 .main-title {
   font-size: 100px;
   text-transform: uppercase;

@@ -101,7 +101,7 @@
     }
 }
 /* Projects */
-.projects {
+.our-projects {
     margin-bottom: 150px;
     @include tablet {
         margin-bottom: 100px;
@@ -129,83 +129,6 @@
         }
         @include phone {
             margin: 24px 0px 32px 0px;
-        }
-    }
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 592px));
-        justify-content: center;
-        column-gap: 32px;
-        row-gap: 62px;
-        @include phone {
-            grid-template-columns: 1fr;
-            gap: 60px;
-        }
-    }
-    &__item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 32px;
-        @include phone {
-            gap: 24px;
-        }
-    }
-    &__link:hover .projects__image {
-        border: 1px solid $accent;
-    }
-    &__link:hover .projects__name {
-        color: $accent;
-    }
-    &__link:hover .projects__arrow::after {
-        content: url("../img/icons/arrow-up--green.svg");
-    }
-    &__image {
-        width: 100%;
-        max-width: 592px;
-        height: auto;
-        border-radius: 24px;
-        border: 1px solid transparent;
-        background-color: #303030;
-        transition: all 0.2s ease-in;
-    }
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-    }
-    &__name {
-        padding-top: 32px;
-        font-size: 24px;
-        color: $text-color;
-        text-transform: uppercase;
-        transition: all 0.2s ease-in;
-        @include phone {
-            padding-top: 20px;
-        }
-    }
-    &__arrow {
-        padding-top: 32px;
-        @include phone {
-            padding-top: 20px;
-        }
-        &::after {
-            content: url("../img/icons/arrow-up--gray.svg");
-        }
-    }
-    &__list-technologies {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-    &__specialties {
-        padding: 5px 20px;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        @include phone {
-            font-size: 16px;
         }
     }
 }

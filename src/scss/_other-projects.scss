@@ -1,0 +1,42 @@
+/* Other projects Swiper */
+.other-projects {
+    margin-bottom: 150px;
+    @include tablet {
+        margin-bottom: 100px;
+    }
+    &__inner {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @include tablet-min {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        @include phone {
+            font-size: 36px;
+        }
+    }
+    &__button {
+        min-width: 311px;
+        @include tablet-min {
+            display: none;
+        }
+    }
+    &__button--mobile {
+        display: none;
+        margin-top: 40px;
+        min-width: 311px;
+        @include tablet-min {
+            display: block;
+        }
+    }
+    &__swiper-slide {
+        max-width: 592px !important;
+    }
+}
