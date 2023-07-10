@@ -39,6 +39,8 @@ const langArr = {
   /*  //Navigation menu */
 };
 
+
+
 const dropdownButton = document.querySelector('.dropdown__button');
 const dropdownList = document.querySelector('.dropdown__list');
 const dropdownListItem = document.querySelector('.dropdown__list-item');

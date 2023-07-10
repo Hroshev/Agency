@@ -37,7 +37,7 @@ function watcher() {
     gulp.watch(path.watch.images, images);
 }
 
-// Последовательная обработака шрифтов
+// Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
