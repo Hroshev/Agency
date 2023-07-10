@@ -69,6 +69,9 @@
     }
     &__file-wrap {
         position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
     }
     &__file-icon--add {
         cursor: pointer !important;
@@ -93,15 +96,19 @@
         font-size: 0;
         width: 190px;
         height: 26px;
-        border-radius: 50%;
     }
     &__group {
         margin-bottom: 32px;
     }
     &__privacy-policy {
-        font-size: 16px;
-        line-height: 1.2;
-        color: $text-color;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        p {
+            font-size: 16px;
+            line-height: 1.2;
+            color: $text-color;
+        }
         a {
             color: $accent;
             text-decoration: underline;
@@ -119,7 +126,6 @@
     }
     &__custome-checkbox {
         position: relative;
-        margin-right: 14px;
         display: inline-block;
         vertical-align: sub;
         cursor: pointer;

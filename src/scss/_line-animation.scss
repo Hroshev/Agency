@@ -29,13 +29,13 @@
     &--path {
       fill: none;
       stroke: #baff4a;
-      stroke-dasharray: 1400;
-      stroke-dashoffset: 1400;
+      stroke-dasharray: 2150;
+      stroke-dashoffset: 2150;
     }
   }
   
   .animate {
-    animation: line-draw 6s linear forwards;
+    animation: line-draw 7s linear forwards;
   }
   
   @keyframes line-draw {

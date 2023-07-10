@@ -58,15 +58,9 @@
         border-radius: 32px;
         background: #303030;
         border: 1px solid transparent;
-        transition: all 0.3s ease-in;
+        transition: border 0.3s ease-in;
         &:hover {
             border: 1px solid $accent;
-        }
-        &:hover .cards__item-text::before {
-            opacity: 1;
-            @include tablet-min {
-                display: none;
-            }
         }
         @include phone {
             padding: 32px 24px;
@@ -78,18 +72,9 @@
         gap: 20px;
     }
     &__item-text {
-        position: relative;
         font-size: 24px;
         font-weight: 700;
         color: $text-color;
-        &::before {
-            position: absolute;
-            content: url("@img/icons/line-hover.svg");
-            opacity: 0;
-            top: 100%;
-            left: 0;
-            transition: all 0.2s ease-in;
-        }
     }
 }
 
