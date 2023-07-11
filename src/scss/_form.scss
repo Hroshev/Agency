@@ -104,15 +104,16 @@
         display: flex;
         align-items: center;
         gap: 14px;
-        p {
-            font-size: 16px;
-            line-height: 1.2;
-            color: $text-color;
-        }
         a {
             color: $accent;
             text-decoration: underline;
         }
+    }
+    &__privacy-policy-text {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $text-color;
     }
     &__real-checkbox {
         width: 0;

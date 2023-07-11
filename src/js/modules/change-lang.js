@@ -36,9 +36,70 @@ const langArr = {
     "en": "Contact us",
     "ger": "Kontakt"
   },
-  /*  //Navigation menu */
+  /*  Projects */
+  "title-metal-company": {
+    "en": "Website for a laser cutting and metalworking company",
+    "ger": "Website für ein Unternehmen für Laserschneiden und Metallbearbeitung"
+  },
+  "tasks-metal-company": {
+    "en": "Create a website that should be modern, stylish and simple at the same time. The design should inspire confidence in the company. Demonstrate the quality of their work.",
+    "ger": "Erstellen Sie eine Website, die modern, stilvoll und einfach zugleich sein sollte. Das Design sollte Vertrauen in das Unternehmen erwecken. Zeigen Sie die Qualität ihrer Arbeit."
+  },
+  "title-fitness-club": {
+    "en": "Website for a fitness club",
+    "ger": "Website für einen Fitnessclub"
+  },
+  "tasks-fitness-club": {
+    "en": "Create a website that should be modern, stylish and simple at the same time. The design should inspire confidence in the company. Demonstrate the quality of their work.",
+    "ger": "Erstellen Sie eine Website, die modern, stilvoll und einfach zugleich sein sollte. Das Design sollte Vertrauen in das Unternehmen erwecken. Zeigen Sie die Qualität ihrer Arbeit."
+  },
+  "title-frozen-meal": {
+    "en": "Website for frozen meal delivery service",
+    "ger": "Website für Tiefkühlkost-Lieferdienst"
+  },
+  "tasks-frozen-meal": {
+    "en": "Create a website that should be modern, stylish and simple at the same time. The design should inspire confidence in the company. Demonstrate the quality of their work.",
+    "ger": "Erstellen Sie eine Website, die modern, stilvoll und einfach zugleich sein sollte. Das Design sollte Vertrauen in das Unternehmen erwecken. Zeigen Sie die Qualität ihrer Arbeit."
+  },
+  /*  Contact Us */
+  "title-contact-us": {
+    "en": "Contact us",
+    "ger": "Kontakt"
+  },
+  "subtitle-contact-us": {
+    "en": "<span>Contact us today</span> and let's realize your digital growth <span>together!</span>",
+    "ger": "<span>Kontaktieren Sie uns</span> noch heute und lassen Sie uns gemeinsam Ihr digitales Wachstum <span>realisieren!</span>"
+  },
+  /*  Form */
+  "form-name": {
+    "en": "*First Name",
+    "ger": "*Vorname"
+  },
+  "form-email": {
+    "en": "*Email",
+    "ger": "*E-Mail"
+  },
+  "form-phone": {
+    "en": "Phone",
+    "ger": "Telefon"
+  },
+  "form-comments": {
+    "en": "*Describe your request",
+    "ger": "*Beschreiben Sie Ihr Anliegen"
+  },
+  "form-file-text": {
+    "en": "Attach document",
+    "ger": "Dokument anhängen"
+  },
+  "privacy-policy-text": {
+    "en": "I have read and agree to the",
+    "ger": "Ich habe gelesen und akzeptiere die"
+  },
+  "form-submit": {
+    "en": "Send",
+    "ger": "Senden Sie"
+  }
 };
-
 
 
 const dropdownButton = document.querySelector('.dropdown__button');
@@ -51,6 +112,14 @@ function isDropdownElement(element) {
     return true;
   }
   return false;
+}
+
+
+function changeSubmitButtonText(lang) {
+  const submitBtn = document.getElementById('submitBtn');
+  if (submitBtn) {
+    submitBtn.value = langArr['form-submit'][lang];
+  }
 }
 
 // Функция для закрытия выпадающего списка
@@ -126,6 +195,7 @@ function changeLanguage(lang) {
 
   dropdownListItem.setAttribute('data-value', lang === 'ger' ? 'en' : 'ger');
   dropdownListItem.innerText = lang === 'ger' ? 'En' : 'Ger';
+  changeSubmitButtonText(lang);
 }
 
 function changeHtmlLang(lang) {
