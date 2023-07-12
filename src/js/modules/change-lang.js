@@ -37,6 +37,32 @@ const langArr = {
     "ger": "Kontakt"
   },
   /*  Projects */
+  "back-button": {
+    "en": "Back",
+    "ger": "Back"
+  },
+  "tasks": {
+    "en": "tasks",
+    "ger": "tasks"
+  },
+  "meta-projects": {
+    "en": "Stages of work",
+    "ger": "Stages of work"
+  },
+  "visuals": {
+    "en": "Visuals",
+    "ger": "Visuals"
+  },
+  "other-projects-title": {
+    "en": "Other projects",
+    "ger": "Other projects"
+  },
+  "other-projects-button": {
+    "en": "See all",
+    "ger": "See all"
+  },
+
+  /*  Projects page */
   "title-metal-company": {
     "en": "Website for a laser cutting and metalworking company",
     "ger": "Website für ein Unternehmen für Laserschneiden und Metallbearbeitung"
@@ -57,10 +83,7 @@ const langArr = {
     "en": "Website for frozen meal delivery service",
     "ger": "Website für Tiefkühlkost-Lieferdienst"
   },
-  "tasks-frozen-meal": {
-    "en": "Create a website that should be modern, stylish and simple at the same time. The design should inspire confidence in the company. Demonstrate the quality of their work.",
-    "ger": "Erstellen Sie eine Website, die modern, stilvoll und einfach zugleich sein sollte. Das Design sollte Vertrauen in das Unternehmen erwecken. Zeigen Sie die Qualität ihrer Arbeit."
-  },
+
   /*  Contact Us */
   "title-contact-us": {
     "en": "Contact us",
@@ -98,8 +121,27 @@ const langArr = {
   "form-submit": {
     "en": "Send",
     "ger": "Senden Sie"
-  }
+  },
+
+
+
+  
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const dropdownButton = document.querySelector('.dropdown__button');

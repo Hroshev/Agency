@@ -26,7 +26,17 @@ const listItem = [
     technologies: ["UX/UI Design", "SEO", "Front-end", "Back-end"],
     tasks: "Create a website that should be modern, stylish and simple at the same time. The design should inspire confidence in the company. Demonstrate the quality of their work."
   },
+
+
+
 ];
+
+
+
+
+
+
+
 
 
 
@@ -65,7 +75,7 @@ function headerProjectsPage(data) {
 
     const container = makeElement("div", "header-projects__container");
 
-    const backButton = makeElement("a", "header-projects__button", "Back");
+    const backButton = makeElement("a", "header-projects__button lng-back-button", "Back");
     backButton.href = "./portfolio.html";
     container.appendChild(backButton);
 
@@ -84,7 +94,7 @@ function headerProjectsPage(data) {
     const innerContainer = makeElement("div", "header-projects__inner");
     container.appendChild(innerContainer);
 
-    const subtitle = makeElement("h3", "header-projects__subtitle", "tasks");
+    const subtitle = makeElement("h3", "header-projects__subtitle lng-tasks", "tasks");
     innerContainer.appendChild(subtitle);
 
     const text = makeElement("p", "header-projects__text", tasks);
