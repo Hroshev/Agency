@@ -123,17 +123,7 @@ const langArr = {
     "ger": "Senden Sie"
   },
 
-
-
-  
 };
-
-
-
-
-
-
-
 
 
 
@@ -148,7 +138,7 @@ const dropdownButton = document.querySelector('.dropdown__button');
 const dropdownList = document.querySelector('.dropdown__list');
 const dropdownListItem = document.querySelector('.dropdown__list-item');
 
-// Функция для проверки, является ли элемент или его родительская область выпадающим списком
+// Function to check if the element or its parent is the dropdown element
 function isDropdownElement(element) {
   if (element === dropdownButton || element === dropdownList || dropdownList.contains(element)) {
     return true;
@@ -156,27 +146,27 @@ function isDropdownElement(element) {
   return false;
 }
 
-
 function changeSubmitButtonText(lang) {
   const submitBtn = document.getElementById('submitBtn');
   if (submitBtn) {
     submitBtn.value = langArr['form-submit'][lang];
   }
+  dropdownButton.innerText = lang === 'ger' ? 'Ger' : 'En'; // Fix the button text here
 }
 
-// Функция для закрытия выпадающего списка
+// Function to close the dropdown list
 function closeDropdownList() {
   dropdownList.classList.remove('dropdown__list--active');
 }
 
-// Обработчик события клика на странице
+// Event listener to close the dropdown list on click outside the dropdown
 document.addEventListener('click', function (event) {
   if (!isDropdownElement(event.target)) {
     closeDropdownList();
   }
 });
 
-// Обработчик события скролла на странице
+// Event listener to close the dropdown list on scroll
 document.addEventListener('scroll', function (event) {
   if (!isDropdownElement(event.target)) {
     closeDropdownList();
@@ -196,32 +186,20 @@ dropdownListItem.addEventListener('click', function () {
   changeLanguage(lang);
   changeHtmlLang(lang);
   changeMetaDescription(lang);
-  saveLanguagePreference(lang); // Сохраняем выбранный язык
+  saveLanguagePreference(lang); // Save the selected language
 });
 
-const select = document.querySelector('.change-lang .dropdown__select');
 const allLang = ['en', 'ger'];
 let currentLang = localStorage.getItem('selectedLang');
 
 if (!allLang.includes(currentLang)) {
-  currentLang = determineUserLanguage();
-  saveLanguagePreference(currentLang); // Сохраняем язык по умолчанию
+  currentLang = determineUserLanguage(); // Determine the user's language based on their browser settings
+  saveLanguagePreference(currentLang); // Save the determined language in localStorage
 } else {
-  changeLanguage(currentLang); // Инициализация выбранного языка
-  changeHtmlLang(currentLang);
-  changeMetaDescription(currentLang);
-  dropdownButton.innerText = currentLang === 'ger' ? 'Ger' : 'En'; // Отображаем выбранный язык в dropdown__button
+  // If the language is already saved in localStorage, use it as the currentLang
 }
 
-if (select) {
-  select.addEventListener('click', () => {
-    select.classList.toggle('dropdown__select--active');
-  });
-  dropdownListItem.addEventListener('click', () => {
-    select.classList.remove('dropdown__select--active');
-  });
-}
-
+// Function to determine the user's language based on their browser settings
 function determineUserLanguage() {
   const userLang = navigator.language.toLowerCase();
   return userLang.startsWith('de') ? 'ger' : 'en';
@@ -252,9 +230,10 @@ function changeMetaDescription(lang) {
 }
 
 function saveLanguagePreference(lang) {
-  localStorage.setItem('selectedLang', lang); // Сохраняем выбранный язык в localStorage
+  localStorage.setItem('selectedLang', lang); // Save the selected language in localStorage
 }
 
+// Initialize the page with the chosen language
 changeLanguage(currentLang);
 changeHtmlLang(currentLang);
 changeMetaDescription(currentLang);

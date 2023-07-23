@@ -1,7 +1,9 @@
 /* Line Animation */
 .line-animation {
+  display: inline-block;
     &-wrap {
       position: relative;
+      display: inline-block;
     }
     &-inner {
       position: absolute;
@@ -10,11 +12,10 @@
       height: auto;
     }
     &-inner--header {
-      left: 40%;
-      top: 85%;
+      left: 44%;
+      top: 93%;
       @include desktop-min {
-        left: 50px;
-        top: 90%;
+        left: 30px;
       }
       @include phone {
         left: 0;
@@ -25,17 +26,18 @@
     }
     &--svg {
       width: 100%;
+      height: auto;
     }
     &--path {
       fill: none;
       stroke: #baff4a;
-      stroke-dasharray: 2150;
-      stroke-dashoffset: 2150;
+      stroke-dasharray: 2200;
+      stroke-dashoffset: 2200;
     }
   }
   
   .animate {
-    animation: line-draw 7s linear forwards;
+    animation: line-draw 8s linear forwards;
   }
   
   @keyframes line-draw {
