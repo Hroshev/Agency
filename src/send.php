@@ -8,11 +8,11 @@ require 'phpmailer/SMTP.php';
 
 // Проверяем, была ли отправлена форма
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Параметры SMTP-сервера Hostinger
+    // Параметры SMTP-сервера
     $smtpHost = 'smtp.hostinger.com';
-    $smtpUsername = 'test@working-starter.com';
-    $smtpPassword = 'T09303945851n2a3s4t###';
-    $smtpPort = 465; // или 465, в зависимости от настроек сервера
+    $smtpUsername = 'ivan@hroshev.website';
+    $smtpPassword = 'H1n2a3s4h###';
+    $smtpPort = 465;
 
     // Создаем экземпляр класса PHPMailer
     $mail = new PHPMailer(true);
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Port = $smtpPort;
 
         // Настройка отправителя и получателя
-        $mail->setFrom('test@working-starter.com', 'New message Agency');
+        $mail->setFrom('ivan@hroshev.website', 'New message');
         $mail->addAddress('grosheff.ivan@gmail.com', 'Ivan');
 
         // Добавление вложения, если было загружено
@@ -45,8 +45,67 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $comments = $_POST['comments'];
 
         // Настройка темы и содержимого письма
-        $mail->Subject = 'New Message';
-        $mail->Body = "Name: $name\nEmail: $email\nPhone: $phone\nComments: $comments";
+        $mail->Subject = 'Agency message';
+
+        // Создаем HTML-содержимое письма с кастомизированными стилями
+        $mail->isHTML(true);
+        $mail->Body = "
+            <html>
+            <head>
+                <title>Agency message</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #ffffff !important;
+                        color: #000000 !important;
+                        font-size: 16px !important;
+                    }
+                    table {
+                        width: 100% !important;
+                        border-collapse: collapse !important;
+                    }
+                    td {
+                        padding: 0px !important;
+                        color: #000000 !important;
+                        font-size: 16px !important;
+                    }
+                    .header {
+                        padding: 0px 0px 10px 0px;
+                        font-size: 20px !important;
+                        font-weight: bold;
+                        color: #111111 !important;
+                    }
+                    a {
+                        font-size: 16px !important;
+                        color: #000000 !important;
+                        text-decoration: none !important;
+                    }
+                </style>
+
+            </head>
+            <body>
+                <div class='header'>New order &#128276;</div>
+                <table>
+                    <tr>
+                        <td style='padding: 0px 8px 0px 0px !important; font-weight: bold !important;'>Name:</td>
+                        <td>$name</td>
+                    </tr>
+                    <tr>
+                        <td style='padding: 0px 8px 0px 0px !important; font-weight: bold !important;'>Email:</td>
+                        <td>$email</td>
+                    </tr>
+                    <tr>
+                        <td style='padding: 0px 8px 0px 0px !important; font-weight: bold !important;'>Phone:</td>
+                        <td>$phone</td>
+                    </tr>
+                    <tr>
+                        <td style='padding: 0px 8px 0px 0px !important; font-weight: bold !important;'>Text:</td>
+                        <td>$comments</td>
+                    </tr>
+                </table>
+            </body>
+            </html>
+        ";
 
         // Отправка письма
         $mail->send();
