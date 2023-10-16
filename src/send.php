@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Port = $smtpPort;
 
         // Настройка отправителя и получателя
-        $mail->setFrom('ivan@hroshev.website', 'New message');
+        $mail->setFrom($smtpUsername, 'New message');
         $mail->addAddress('grosheff.ivan@gmail.com', 'Ivan');
 
         // Добавление вложения, если было загружено
